@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Testimonial Slider</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+    <style>
+        .swiper-container {
+            max-width: 50em;
+            margin: auto;
+            
+        }
+
+        .swiper-slide {
+            text-align: center;
+            padding: 50px;
+            background-color: #FFFFFF;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgb(96, 151, 6);
+        }
+
+        .swiper-slide img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin: 0 auto 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="swiper-container p-28 ">
+        <div class="swiper-wrapper space-x-6">
+            <div class="swiper-slide">
+                <img src="https://healthxdiet.com/healthxAdmin/images/testimonial/Amisha.jpg" alt="Client Avatar">
+                <h3 class="text-lg font-semibold">Amisha</h3>
+                <p class="text-gray-800">"
+                                Thanks to HealthX, I lost 10 kgs in one and a half months! The dietitian's guidance and support were amazing.                            "</p>
+            </div>
+            <div class="swiper-slide">
+                <img src="https://healthxdiet.com/healthxAdmin/images/testimonial/Amit.jpg" alt="Client Avatar">
+                <h3 class="text-lg font-semibold">Amit</h3>
+                <p class="text-gray-800">"
+                                Thanks to HealthX, I lost 10 kgs in one and a half months! The dietitian's guidance and support were amazing.                            "</p>
+            </div>
+            <div class="swiper-slide">
+                <img src="https://healthxdiet.com/healthxAdmin/images/testimonial/Kamini.jpg" alt="Client Avatar">
+                <h3 class="text-lg font-semibold">Kamini</h3>
+                <p class="text-gray-800">"
+                                Thanks to HealthX, I lost 10 kgs in one and a half months! The dietitian's guidance and support were amazing.                            "</p>
+            </div>
+            <div class="swiper-slide">
+                <img src="https://healthxdiet.com/healthxAdmin/images/testimonial/Sakshi.jpg" alt="Client Avatar">
+                <h3 class="text-lg font-semibold">Sakshi</h3>
+                <p class="text-gray-800">"
+                                Thanks to HealthX, I lost 10 kgs in one and a half months! The dietitian's guidance and support were amazing.                            "</p>
+            </div>
+            <div class="swiper-slide">
+                <img src="https://healthxdiet.com/healthxAdmin/images/testimonial/Vijay.jpg" alt="Client Avatar">
+                <h3 class="text-lg font-semibold">Vijay</h3>
+                <p class="text-gray-800">"
+                                Thanks to HealthX, I lost 10 kgs in one and a half months! The dietitian's guidance and support were amazing.                            "</p>
+            </div>
+            <div class="swiper-slide">
+                <img src="https://healthxdiet.com/healthxAdmin/images/testimonial/Vipul.jpg" alt="Client Avatar">
+                <h3 class="text-lg font-semibold">Vipul</h3>
+                <p class="text-gray-800">"
+                                Thanks to HealthX, I lost 10 kgs in one and a half months! The dietitian's guidance and support were amazing.                            "</p>
+            </div>
+            <div class="swiper-slide">
+                <img src="https://healthxdiet.com/healthxAdmin/images/testimonial/Kamini.jpg" alt="Client Avatar">
+                <h3 class="text-lg font-semibold">Kamini</h3>
+                <p class="text-gray-800">"
+                                Thanks to HealthX, I lost 10 kgs in one and a half months! The dietitian's guidance and support were amazing.                            "</p>
+            </div>
+
+        </div>
+        <!-- Add Pagination -->
+        <!-- <div class="swiper-pagination"></div> -->
+        <!-- Add Navigation -->
+        <!-- <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div> -->
+    </div>
+
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+        const swiper = new Swiper('.swiper-container', {
+
+            autoplay: {
+                delay: 3000,
+            },
+        });
+
+        const observer = new IntersectionObserver(entries => {
+            const firstEntry = entries[0];
+            if (firstEntry.isIntersecting) {
+                swiper.autoplay.start();
+            } else {
+                swiper.autoplay.stop();
+            }
+        });
+
+        const swiperContainer = document.querySelector('.swiper-container');
+        observer.observe(swiperContainer);
+    </script>
+</body>
+
+</html>
